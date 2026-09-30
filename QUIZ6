@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+// Function to determine if the number is positive, negative, or zero
+void checkSign(int number) {
+    if (number > 0) {
+        printf("The number is POSITIVE.\n");
+    } 
+    else if (number < 0) {
+        printf("The number is NEGATIVE.\n");
+    } 
+    else {
+        printf("The number is ZERO.\n");
+    }
+}
+
+// Function to determine if the number is even or odd
+void checkEvenOdd(int number) {
+    if (number % 2 == 0) {
+        printf("The number is EVEN.\n");
+    } 
+    else {
+        printf("The number is ODD.\n");
+    }
+}
+
+int main() {
+    int number;
+    int i;
+
+    printf("====================\n");
+    printf("   NUMBER ANALYZER\n");
+    printf("====================\n");
+
+    // Loop to enter 5 integers
+    for (i = 1; i <= 5; i++) {
+        printf("\nEnter number %d: ", i);
+        scanf("%d", &number);
+
+        // Call the functions
+        checkSign(number);
+        checkEvenOdd(number);
+    }
+
+    printf("\nProgram finished.\n");
+
+    return 0;
+}
